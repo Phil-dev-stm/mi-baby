@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>HAPPY 1ST MONTHSARY, BABY</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+overflow-x:hidden;
+
+font-family:'Open Sans', sans-serif;
+
+background:
+linear-gradient(
+180deg,
+#050510,
+#140423,
+#2d093f,
+#4a0e63,
+#12061d);
+
+color:white;
+
+}
+
+/* ----------------------- */
+/* STAR BACKGROUND */
+/* ----------------------- */
+
+#stars{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-4;
+
+}
+
+.star{
+
+position:absolute;
+width:2px;
+height:2px;
+
+background:white;
+
+border-radius:50%;
+
+animation:
+twinkle linear infinite;
+
+}
+
+@keyframes twinkle{
+
+0%{
+opacity:.2;
+transform:scale(.5);
+}
+
+50%{
+opacity:1;
+transform:scale(1.5);
+}
+
+100%{
+opacity:.2;
+transform:scale(.5);
+}
+
+}
+
+/* ----------------------- */
+/* PETALS */
+/* ----------------------- */
+
+#petals{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+z-index:-2;
+
+overflow:hidden;
+
+}
+
+.petal{
+
+position:absolute;
+
+font-size:20px;
+
+opacity:.9;
+
+animation:
+fall linear infinite;
+
+}
+
+@keyframes fall{
+
+0%{
+
+transform:
+translateY(-10vh)
+rotate(0deg);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(120vh)
+rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+/* ----------------------- */
+/* LILIES */
+/* ----------------------- */
+
+#lilies{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:-3;
+
+}
+
+.lily{
+
+position:absolute;
+
+font-size:34px;
+
+opacity:.35;
+
+animation:
+floatFlower
+18s linear infinite;
+
+}
+
+@keyframes floatFlower{
+
+0%{
+
+transform:
+translateY(110vh)
+rotate(0deg);
+
+}
+
+100%{
+
+transform:
+translateY(-20vh)
+rotate(360deg);
+
+}
+
+}
+
+/* ----------------------- */
+/* HERO */
+/* ----------------------- */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.hero h1{
+
+font-size:60px;
+
+color:#ffd6ea;
+
+font-weight:700;
+
+text-shadow:none;
+
+animation:none;
+
+}
+
+
+from{
+
+text-shadow:
+
+0 0 10px pink,
+0 0 20px hotpink;
+
+}
+
+to{
+
+text-shadow:
+
+0 0 25px white,
+0 0 45px hotpink,
+0 0 70px deeppink;
+
+}
+
+}
+
+.hero p{
+
+margin-top:20px;
+
+font-size:22px;
+
+opacity:.9;
+
+}
+
+.scroll{
+
+margin-top:45px;
+
+font-size:45px;
+
+animation:
+bounce
+1.8s infinite;
+
+}
+
+@keyframes bounce{
+
+50%{
+
+transform:
+translateY(15px);
+
+}
+
+}
+
+/* ----------------------- */
+/* LETTER */
+/* ----------------------- */
+
+section{
+
+padding:120px 10%;
+
+}
+
+.card{
+
+max-width:900px;
+
+margin:auto;
+
+padding:50px;
+
+background:
+
+rgba(255,255,255,.08);
+
+border:
+
+1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+border-radius:30px;
+
+box-shadow:
+
+0 0 40px rgba(255,192,203,.2);
+
+}
+
+.card h2{
+
+font-size:42px;
+
+margin-bottom:30px;
+
+text-align:center;
+
+color:#ffd1ec;
+
+}
+
+#letter{
+
+font-size:20px;
+
+line-height:1.9;
+
+white-space:pre-wrap;
+
+min-height:350px;
+
+}/* ----------------------- */
+/* MEMORY GALLERY */
+/* ----------------------- */
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(240px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+.photo{
+
+height:260px;
+
+border-radius:22px;
+
+overflow:hidden;
+
+background:
+rgba(255,255,255,.08);
+
+border:
+2px solid rgba(255,182,218,.25);
+
+transition:.4s;
+
+box-shadow:
+0 10px 30px rgba(255,105,180,.15);
+
+}
+
+.photo:hover{
+
+transform:
+translateY(-10px)
+scale(1.03);
+
+box-shadow:
+0 20px 45px rgba(255,105,180,.35);
+
+}
+
+.photo img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+/* ----------------------- */
+/* ENDING */
+/* ----------------------- */
+
+.ending{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+text-align:center;
+
+padding:30px;
+
+}
+
+.ending h2{
+
+font-size:64px;
+
+color:#ffd8ef;
+
+text-shadow:
+0 0 20px hotpink,
+0 0 40px deeppink;
+
+margin-bottom:25px;
+
+}
+
+.ending p{
+
+font-size:24px;
+
+max-width:750px;
+
+line-height:1.8;
+
+}
+
+/* ----------------------- */
+/* CURSOR HEARTS */
+/* ----------------------- */
+
+.heart{
+
+position:fixed;
+
+pointer-events:none;
+
+font-size:18px;
+
+animation:
+heartFloat
+1.2s linear forwards;
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+opacity:1;
+transform:
+translateY(0)
+scale(1);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+translateY(-70px)
+scale(2);
+
+}
+
+}
+
+footer{
+
+padding:60px 20px;
+
+text-align:center;
+
+opacity:.75;
+
+font-size:16px;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.card{
+
+padding:30px;
+
+}
+
+.card h2{
+
+font-size:34px;
+
+}
+
+.ending h2{
+
+font-size:42px;
+
+}
+
+#letter{
+
+font-size:18px;
+
+}
+
+}
+.letter-button-container{
+
+margin-top:60px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:20px;
+
+}
+
+.letter-text{
+
+font-size:20px;
+
+color:#ffe4f3;
+
+}
+
+.letter-button{
+
+padding:18px 42px;
+
+border:none;
+
+cursor:pointer;
+
+border-radius:999px;
+
+font-size:19px;
+
+font-weight:700;
+
+font-family:'Open Sans',sans-serif;
+
+background:linear-gradient(
+135deg,
+#ffb3d9,
+#ff69b4);
+
+color:white;
+
+transition:.35s;
+
+box-shadow:
+0 15px 35px rgba(255,105,180,.35);
+
+}
+
+.letter-button:hover{
+
+transform:translateY(-6px) scale(1.05);
+
+box-shadow:0 20px 45px rgba(255,105,180,.55);
+
+}
+
+.letter-button:active{
+
+transform:scale(.95);
+
+}
+
+/* Leave this below it */
+
+footer{
+
+padding:60px 20px;
+
+text-align:center;
+
+opacity:.75;
+
+font-size:16px;
+
+}
+</style>
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<div id="petals"></div>
+
+<div id="lilies"></div>
+
+<section class="hero">
+
+<h1>HAPPY 1ST MONTHSARY, BABY</h1>
+
+<p>
+    06.28.26
+</p>
+
+<div class="scroll">
+↓
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>
+A Letter For You
+</h2>
+
+<div id="letter"></div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>
+GOATED PICS
+</h2>
+
+<div class="gallery">
+
+<div class="photo">
+<img src="photo1.jpg" alt="">
+</div>
+
+<div class="photo">
+<img src="photo2.jpg" alt="">
+</div>
+
+<div class="photo">
+<img src="photo3.jpg" alt="">
+</div>
+
+<div class="photo">
+<img src="photo4.jpg" alt="">
+</div>
+
+<div class="photo">
+<img src="photo5.jpg" alt="">
+</div>
+
+<div class="photo">
+<img src="photo6.jpg" alt="">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="ending">
+
+<h2>
+I LOVE YOU, BABY :> 
+</h2>
+
+<p>
+
+No matter where life takes me, I will always choose you, again and again. And every single time.
+
+Thank you for being my safe place, my happiness, and my favorite person.
+
+Happy Monthsary, Baby. ❤️
+
+</p>
+
+<div class="letter-button-container">
+
+    <p class="letter-text">
+        mi letter 4 u hihi...
+    </p>
+
+    <button
+        class="letter-button"
+        onclick="openLetter()">
+
+        press mi 
+
+    </button>
+
+</div>
+
+</section>
+
+<footer>
+
+u mi baby forevah
+
+</footer>
+
+<script>
+
+const letter = `Happy Monthsary, baby
+
+Every day with you becomes another favorite memory.
+
+Thank you for making ordinary days feel extraordinary.
+
+Thank you for every smile,
+every laugh,
+every late-night conversation,
+every reassurance,
+and every little thing you do.
+
+You're the best part of my life,
+and I'll continue choosing you every single day.
+
+I love you more than words can ever explain.
+
+`;
+
+let i = 0;
+
+function typeWriter(){
+
+if(i < letter.length){
+
+document.getElementById("letter").innerHTML += letter.charAt(i);
+
+i++;
+
+setTimeout(typeWriter,35);
+
+}
+
+}
+
+window.onload = typeWriter;
+const stars = document.getElementById("stars");
+
+for(let i=0;i<250;i++){
+
+const s=document.createElement("div");
+
+s.className="star";
+
+s.style.left=Math.random()*100+"vw";
+
+s.style.top=Math.random()*100+"vh";
+
+s.style.animationDuration=
+(2+Math.random()*5)+"s";
+
+s.style.animationDelay=
+(Math.random()*5)+"s";
+
+stars.appendChild(s);
+
+}
+
+/* ----------------------- */
+/* PETALS */
+/* ----------------------- */
+
+const petals=document.getElementById("petals");
+
+for(let i=0;i<35;i++){
+
+const p=document.createElement("div");
+
+p.className="petal";
+
+p.innerHTML="🌸";
+
+p.style.left=Math.random()*100+"vw";
+
+p.style.animationDuration=
+(8+Math.random()*10)+"s";
+
+p.style.animationDelay=
+(Math.random()*10)+"s";
+
+p.style.fontSize=
+(14+Math.random()*20)+"px";
+
+petals.appendChild(p);
+
+}
+
+/* ----------------------- */
+/* LILIES */
+/* ----------------------- */
+
+const lilies=document.getElementById("lilies");
+
+for(let i=0;i<16;i++){
+
+const l=document.createElement("div");
+
+l.className="lily";
+
+l.innerHTML="🪷";
+
+l.style.left=Math.random()*100+"vw";
+
+l.style.animationDuration=
+(15+Math.random()*12)+"s";
+
+l.style.animationDelay=
+(Math.random()*12)+"s";
+
+l.style.fontSize=
+(26+Math.random()*26)+"px";
+
+lilies.appendChild(l);
+
+}
+
+/* ----------------------- */
+/* CURSOR HEARTS */
+/* ----------------------- */
+
+document.addEventListener("mousemove",(e)=>{
+
+const h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤";
+
+h.style.left=e.clientX+"px";
+
+h.style.top=e.clientY+"px";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+
+h.remove();
+
+},1200);
+
+});
+
+/* ----------------------- */
+/* OPTIONAL:
+Fade in sections on scroll
+----------------------- */
+
+const sections=document.querySelectorAll("section");
+
+sections.forEach(sec=>{
+
+sec.style.opacity="0";
+
+sec.style.transform="translateY(50px)";
+
+sec.style.transition="1s";
+
+});
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+sections.forEach(sec=>observer.observe(sec));
+
+function openLetter(){
+
+const button=document.querySelector(".letter-button");
+
+button.disabled=true;
+
+button.innerHTML="💖 Opening...";
+
+button.style.transform="scale(.92)";
+
+button.style.opacity=".9";
+
+// Hearts popping out
+
+for(let i=0;i<18;i++){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML=Math.random()>.5?"❤️":"🌸";
+
+heart.style.left=
+(window.innerWidth/2+
+(Math.random()*200-100))+"px";
+
+heart.style.top=
+(window.innerHeight-180)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},1200);
+
+}
+
+// wait before opening
+
+setTimeout(()=>{
+
+window.open(
+"https://medium.com/@philipindencio/kay-tagal-ko-nang-nag-iisa-andiyan-ka-lang-pala-that-was-the-first-thing-that-came-into-my-mind-73a35afbc925",
+"_blank"
+);
+
+},900);
+
+}
+</script>
+
+</body>
+</html>
